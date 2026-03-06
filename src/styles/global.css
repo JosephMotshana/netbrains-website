@@ -1,0 +1,115 @@
+/* --- Navbar Container --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #1F3B54;
+  z-index: 2000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* --- Logo --- */
+.logo {
+  height: 80px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* --- Desktop Navigation --- */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #22d3ee;
+}
+
+/* --- Hamburger Menu (Hidden by default) --- */
+.hamburger {
+  display: none; /* Hidden on Desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 2100; /* Stays above the mobile menu */
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* --- Responsive Mobile Styles --- */
+@media (max-width: 992px) {
+  .hamburger {
+    display: flex; /* Show only on Mobile */
+  }
+
+  /* Hamburger to 'X' Animation */
+  .bar.open:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .bar.open:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  .bar.open:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Mobile Slide-out Menu */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden off-screen */
+    width: 100%;
+    height: 100vh;
+    background-color: #1F3B54;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .nav-links.mobile-open {
+    right: 0; /* Slide in */
+  }
+
+  .nav-links li a {
+    font-size: 24px; /* Larger text for touch targets */
+  }
+}
