@@ -24,8 +24,6 @@ const Home = () => {
         <div className="hero-content">
           <div className="hero-text">
             <small className="welcome-text">Expert Staffing. Seamless Solutions.</small>
-            <br  />
-            <br /> 
             <br /> {/* Line break for spacing */}
 
             <h1>
