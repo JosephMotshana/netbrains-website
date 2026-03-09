@@ -47,10 +47,9 @@ const Services = () => {
 
       <section className="services-hero">
         <div className="hero-overlay">
-          <small className="welcome-text">Streamlined Hiring</small>
+          <small className="welcome-text">Streamline Hiring</small>
           <h1>
-            With 
-            <span className="highlight">Recruitment Expects</span>
+            <span className="highlight">With Recruitment Experts</span>
           </h1>
           <p className="hero-description">
             We handle the entire hiring process from start to finish, ensuring a 
