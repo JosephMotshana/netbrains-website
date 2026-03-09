@@ -22,6 +22,8 @@ const Contact = () => {
           
           {/* Left Side: Agency Info */}
           <div className="contact-info-panel">
+            <br />
+            <br />
             <h1 className="contact-title">
               Let’s  <br />
               <span className="highlight">Connect.</span>
