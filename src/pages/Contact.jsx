@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <label>Call / WhatsApp</label>
-                  <a href="tel:+27735622357">073 562 2357</a>
+                  <a href="tel:+27 64 919 9722">+27 64 919 9722</a>
                 </div>
               </div>
 

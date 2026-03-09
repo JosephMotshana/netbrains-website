@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <main className="home-wrapper">
       <Helmet>
-        <title>Net.Brains | Connecting The Right Minds</title>
-        <meta name="description" content="Net.Brains handles the entire hiring process from start to finish, finding qualified candidates for your business." />
+        <title>NetBrains | Connecting The Right Minds</title>
+        <meta name="description" content="NetBrains handles the entire hiring process from start to finish, finding qualified candidates for your business." />
       </Helmet>
 
       {/* Hero Section: Applied the background image here */}
@@ -29,7 +29,7 @@ const Home = () => {
             <br /> {/* Line break for spacing */}
 
             <h1>
-              NetBrains Connecting <span className="highlight">The Right Minds</span> <br /> 
+              NetBrains - Connecting <span className="highlight">The Right Minds</span> <br /> 
               to the Right Opportunities.
             </h1>
             <p>
@@ -40,7 +40,7 @@ const Home = () => {
 
             <div className="hero-actions">
               <Link to="/contact" className="hero-btn">Hire Top Talent</Link>
-              <Link to="/submitcv" className="hero-btn secondary">Submit Your CV</Link>
+              <Link to="/submit-cv" className="hero-btn secondary">Submit Your CV</Link>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ const Home = () => {
       {/* Closing CTA */}
       <section className="final-cta">
         <h2>Ready for a better hiring experience?</h2>
-        <p>Let Net.Brains connect you with excellence today.</p>
+        <p>Let NetBrains connect you with excellence today.</p>
         <Link to="/contact" className="hero-btn">Connect With Us</Link>
       </section>
     </main>

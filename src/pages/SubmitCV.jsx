@@ -6,8 +6,8 @@ const SubmitCV = () => {
   return (
     <main className="submit-cv-page">
       <Helmet>
-        <title>Submit CV | Net.Brains Talent Network</title>
-        <meta name="description" content="Submit your CV to Net.Brains. We connect top talent in HR, IT, and Admin with premier South African and global companies." />
+        <title>Submit CV | NetBrains Talent Network</title>
+        <meta name="description" content="Submit your CV to NetBrains. We connect top talent in HR, IT, and Admin with premier South African and global companies." />
       </Helmet>
 
       <section className="submit-hero">

@@ -23,7 +23,7 @@ function Navbar() {
             <li><Link to="/" onClick={closeMenu}>HOME</Link></li>
             <li><Link to="/about" onClick={closeMenu}>ABOUT</Link></li>
             <li><Link to="/services" onClick={closeMenu}>SERVICES</Link></li>
-            <li><Link to="/submitcv" onClick={closeMenu}>SUBMIT CV</Link></li>
+            <li><Link to="/submit-cv" onClick={closeMenu}>SUBMIT CV</Link></li>
             <li><Link to="/contact" onClick={closeMenu}>CONNECT</Link></li>
           </ul>
 

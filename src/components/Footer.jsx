@@ -31,6 +31,17 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Quick Navigation */}
+        <div className="footer-section">
+          <h3>Network</h3>
+          <ul className="footer-links">
+            <li><Link to="/" onClick={scrollToTop}>Home</Link></li>
+            <li><Link to="/about" onClick={scrollToTop}>Our Mission</Link></li>
+            <li><Link to="/services" onClick={scrollToTop}>Services</Link></li>
+            <li><Link to="/submit-cv" onClick={scrollToTop}>Join the Talent Pool</Link></li>
+          </ul>
+        </div>
+
         {/* Contact Information */}
         <div className="footer-section">
           <h3>Get in Touch</h3>
@@ -52,6 +63,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <p>&copy; {currentYear} NetBrains Agency. All rights reserved.</p>
+          <Link to="https://actsquadrant.com/" className="hero-btn">Powered By Acts Quadrant</Link>
           <div className="footer-legal">
             <Link to="/privacy">Privacy Policy</Link>
             <span className="divider">|</span>
