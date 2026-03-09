@@ -23,9 +23,11 @@ const Home = () => {
       >
         <div className="hero-content">
           <div className="hero-text">
+            <br />
+            <br />
+            <br />
             <small className="welcome-text">Expert Staffing. Seamless Solutions.</small>
             <br /> {/* Line break for spacing */}
-
             <h1>
               NetBrains - Connecting <span className="highlight">The Right Minds</span> <br /> 
               to the Right Opportunities.

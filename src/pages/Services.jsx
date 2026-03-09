@@ -49,7 +49,7 @@ const Services = () => {
         <div className="hero-overlay">
           <small className="welcome-text">Streamlined Hiring</small>
           <h1>
-            With <br />
+            With 
             <span className="highlight">Recruitment Expects</span>
           </h1>
           <p className="hero-description">

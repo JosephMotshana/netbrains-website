@@ -7,8 +7,8 @@ const Contact = () => {
   return (
     <main className="contact-page-wrapper">
       <Helmet>
-        <title>Connect with Net.Brains | Expert Recruitment Intermediaries</title>
-        <meta name="description" content="Reach out to Net.Brains for specialized HR, IT, and Admin recruitment services. Let us handle your entire hiring process." />
+        <title>Connect with NetBrains | Expert Recruitment Intermediaries</title>
+        <meta name="description" content="Reach out to NetBrains for specialized HR, IT, and Admin recruitment services. Let us handle your entire hiring process." />
       </Helmet>
 
       <section 
