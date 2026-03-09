@@ -49,8 +49,8 @@ const Services = () => {
         <div className="hero-overlay">
           <small className="welcome-text">Streamlined Hiring</small>
           <h1>
-            Expert Sourcing. <br />
-            <span className="highlight">Efficient Results.</span>
+            With <br />
+            <span className="highlight">Recruitment Expects</span>
           </h1>
           <p className="hero-description">
             We handle the entire hiring process from start to finish, ensuring a 
