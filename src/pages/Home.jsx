@@ -1,59 +1,78 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Brain, Search, Rocket } from 'lucide-react';
 
 const Home = () => {
   return (
     <main className="home-wrapper">
-      {/* SEO SECTION - Direct and Crawler Friendly */}
       <Helmet>
-        <title>Home | NetBrains AI Recruitment</title>
-        <meta name="description" content="NetBrains is a next-generation recruitment agency using AI to connect top software engineers with world-class companies." />
-        <meta name="keywords" content="Recruitment, AI, Software Engineering, NetBrains" />
+        <title>Net.Brains | Connecting The Right Minds</title>
+        <meta name="description" content="Net.Brains handles the entire hiring process from start to finish, finding qualified candidates for your business." />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* Hero Section: The Big Hook */}
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <small className="welcome-text">Welcome To NetBrains</small>
+            <small className="welcome-text">Expert Staffing. Seamless Solutions.</small>
             <h1>
-              Hire the <span className="highlight">Future</span> <br />
-              of Tech.
+              Connecting <span className="highlight">The Right Minds</span> <br /> 
+              to the Right Opportunities.
             </h1>
             <p>
-              NetBrains combines neural-matching algorithms with human expertise 
-              to find your next lead developer in record time.
+              Net.Brains is the agency that handles the entire hiring process for your business 
+              from start to finish. We don't just fill seats; we find the talent 
+              that helps your business thrive.
             </p>
 
             <div className="hero-actions">
-              <Link to="/contact" className="hero-btn">Post a Job</Link>
-              <Link to="/services" className="hero-btn secondary">Browse Talent</Link>
+              <Link to="/contact" className="hero-btn">Hire Top Talent</Link>
+              <Link to="/submitcv" className="hero-btn secondary">Submit Your CV</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="features-grid">
-        <div className="feature-card">
-          <div className="feature-icon"><Brain size={32} /></div>
-          <h3>AI Sourcing</h3>
-          <p>Our proprietary algorithms scan GitHub and LinkedIn to find hidden gems.</p>
-        </div>
+      {/* Catchy Introduction Grid */}
+      <section className="intro-highlights">
+        <div className="container">
+          <h2 className="section-title">Your End-to-End Hiring Partner</h2>
+          <div className="catchy-grid">
+            
+            <div className="catchy-card">
+              <h3>Human Resources</h3>
+              <p>Specialized recruitment for HR staff that drive company culture.</p>
+            </div>
 
-        <div className="feature-card">
-          <div className="feature-icon"><Search size={32} /></div>
-          <h3>Deep Screening</h3>
-          <p>Technical interviews conducted by senior developers, not just HR.</p>
-        </div>
+            <div className="catchy-card">
+              <h3>IT Placements</h3>
+              <p>Sourcing technical personnel who power innovation and growth.</p>
+            </div>
 
-        <div className="feature-card">
-          <div className="feature-icon"><Rocket size={32} /></div>
-          <h3>Fast Placement</h3>
-          <p>Reduce your "Time-to-Hire" by 40% with our pre-vetted pipeline.</p>
+            <div className="catchy-card">
+              <h3>Admin Professionals</h3>
+              <p>Precision hiring for the administrative backbone of your business.</p>
+            </div>
+
+          </div>
         </div>
+      </section>
+
+      {/* The Intermediary Message */}
+      <section className="mission-statement">
+        <div className="container text-center">
+          <p className="large-quote">
+            "Our primary function is to act as <strong>intermediaries</strong> between companies and candidates, 
+            ensuring a smooth, efficient, and professional experience for everyone involved."
+          </p>
+        </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="final-cta">
+        <h2>Ready for a better hiring experience?</h2>
+        <p>Let Net.Brains connect you with excellence today.</p>
+        <Link to="/contact" className="hero-btn">Connect With Us</Link>
       </section>
     </main>
   );

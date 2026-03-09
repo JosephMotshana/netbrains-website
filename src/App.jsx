@@ -6,6 +6,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import SubmitCV from './pages/SubmitCV';
+import './styles/global.css';
 
 function App() {
   return (
