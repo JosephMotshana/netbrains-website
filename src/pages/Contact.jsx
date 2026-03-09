@@ -1,73 +1,116 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, MessageSquare } from 'lucide-react';
+import contactsBg from '../assets/logo.png'; 
 
 const Contact = () => {
   return (
-    <main className="contact-page">
+    <main className="contact-page-wrapper">
       <Helmet>
-        <title>Contact NetBrains | AI Recruitment</title>
-        <meta name="description" content="Connect with NetBrains for world-class tech talent sourcing and career opportunities." />
+        <title>Connect with Net.Brains | Expert Recruitment Intermediaries</title>
+        <meta name="description" content="Reach out to Net.Brains for specialized HR, IT, and Admin recruitment services. Let us handle your entire hiring process." />
       </Helmet>
 
-      {/* Background Glows */}
-      <div className="glow-cyan"></div>
-      <div className="glow-blue"></div>
+      <section 
+        className="contact-hero-section" 
+        style={{ backgroundImage: `url(${contactsBg})` }}
+      >
+        {/* Navy Overlay to match brand */}
+        <div className="contact-overlay"></div>
 
-      <div className="contact-grid">
-        
-        {/* Left Column: Info */}
-        <div className="contact-info">
-          <h1>
-            Let’s build your <br />
-            <span className="highlight">Engineering Brain.</span>
-          </h1>
-          <p className="hero-description">
-            Reach out to our specialized consultants for a demo of our AI matching platform.
-          </p>
+        <div className="contact-container">
+          
+          {/* Left Side: Agency Info */}
+          <div className="contact-info-panel">
+            <h1 className="contact-title">
+              Let’s  <br />
+              <span className="highlight">Connect.</span>
+            </h1>
+            <p className="contact-subtitle">
+              Whether you are looking to hire top-tier talent or seeking your next career milestone, 
+              our team is ready to facilitate the journey.
+            </p>
 
-          <div className="info-card">
-            <div className="icon-wrapper"><MapPin size={24} /></div>
-            <div>
-              <small className="welcome-text">Office</small>
-              <p>Tech District, Fourways, SA</p>
+            <div className="contact-methods">
+              
+              {/* Phone/WhatsApp */}
+              <div className="method-item">
+                <div className="icon-circle">
+                  <Phone size={24} />
+                </div>
+                <div>
+                  <label>Call / WhatsApp</label>
+                  <a href="tel:+27735622357">073 562 2357</a>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="method-item">
+                <div className="icon-circle">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <label>Email Our Consultants</label>
+                  <a href="mailto:info@netbrains.co.za">info@netbrains.co.za</a>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="method-item">
+                <div className="icon-circle">
+                  <MapPin size={24} />
+                </div>
+                <div>
+                  <label>Our Headquarters</label>
+                  <p>South Africa | Serving Global Markets</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <div className="info-card">
-            <div className="icon-wrapper" style={{ color: '#3b82f6' }}><Mail size={24} /></div>
-            <div>
-              <small className="welcome-text">Email</small>
-              <p>partnerships@netbrains.io</p>
+          {/* Right Side: Professional Inquiry Form */}
+          <div className="contact-form-card">
+            <div className="form-header">
+              <MessageSquare className="icon-orange" />
+              <h3>Send an Inquiry</h3>
+              <p>Our intermediaries typically respond within 2-4 business hours.</p>
             </div>
+            
+            <form action="https://formspree.io/f/xkogdjbr" method="POST" className="main-contact-form">
+              <div className="form-row">
+                <div className="input-group">
+                  <label>Full Name</label>
+                  <input type="text" name="name" placeholder="John Doe" required />
+                </div>
+                <div className="input-group">
+                  <label>Email Address</label>
+                  <input type="email" name="email" placeholder="john@company.com" required />
+                </div>
+              </div>
+
+              <div className="input-group">
+                <label>Inquiry Type</label>
+                <select name="type" className="form-select">
+                  <option value="hiring">I'm looking to hire talent</option>
+                  <option value="job-seeker">I'm looking for a career change</option>
+                  <option value="other">General Inquiry</option>
+                </select>
+              </div>
+
+              <div className="input-group">
+                <label>How can we assist you?</label>
+                <textarea name="message" placeholder="Tell us about your requirements..." rows="4" required></textarea>
+              </div>
+
+              <button type="submit" className="submit-btn">
+                Send Message <Send size={18} />
+              </button>
+            </form>
           </div>
+
         </div>
-
-        {/* Right Column: Form */}
-        <div className="contact-form-card">
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-            <div className="input-group">
-              <label>Your Name</label>
-              <input type="text" placeholder="E.g. Alan Turing" />
-            </div>
-
-            <div className="input-group">
-              <label>Company Email</label>
-              <input type="email" placeholder="alan@enigma.io" />
-            </div>
-
-            <div className="input-group">
-              <label>Message</label>
-              <textarea rows="4" placeholder="Tell us what you're building..." />
-            </div>
-
-            <button type="submit" className="submit-btn">
-              Initiate Connection <Send size={18} style={{ marginLeft: '8px' }} />
-            </button>
-          </form>
-        </div>
-
-      </div>
+      </section>
     </main>
   );
 };

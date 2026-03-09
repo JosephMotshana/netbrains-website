@@ -14,11 +14,11 @@ function App() {
       <Navbar />
       <main>
         <Routes>
+          <Route path="/submit-cv" element={<SubmitCV />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/submit-cv" element={<SubmitCV />} />
         </Routes>
       </main>
       <Footer />

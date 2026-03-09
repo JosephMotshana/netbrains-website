@@ -13,7 +13,8 @@ html, body {
 background-color: #061a25;
   
   padding: 20px;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   
@@ -138,4 +139,953 @@ background-color: #061a25;
     padding: 20px 0;
     font-size: 1.1rem;
   }
+}
+/* --- Global Resets for Perfect Fit --- *//* --- Global Home Reset & Spacing Fix --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-wrapper {
+  background-color: #061a25; 
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Hero Section (Impactful Typography & Crimson Accent) --- */
+.hero {
+  position: relative;
+  min-height: 85vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+  
+  background-image: linear-gradient(
+      rgba(6, 26, 37, 0.85), 
+      rgba(6, 26, 37, 0.85)
+    ), 
+    url('home.png'); 
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.welcome-text {
+  color: #B90E0A; /* Crimson Red */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem); 
+  line-height: 1.05;
+  margin-bottom: 25px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.highlight {
+  color: #B90E0A; /* Crimson Red */
+}
+
+.hero p {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+/* --- Buttons (Crimson Branding) --- */
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 20px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #B90E0A; /* Crimson Red */
+  color: #ffffff; /* White text for better contrast on red */
+  border: 2px solid #B90E0A;
+}
+
+.hero-btn.secondary {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(185, 14, 10, 0.3);
+  background-color: #d6110c; /* Subtle hover brightness */
+}
+
+/* --- Intro Highlights Grid (Crimson Accents) --- */
+.intro-highlights {
+  padding: 80px 0;
+  background-color: #041017;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 45px;
+}
+
+.catchy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.catchy-card {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.catchy-card:hover {
+  border-color: #B90E0A; /* Crimson Red */
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.catchy-card h3 {
+  color: #B90E0A; /* Crimson Red */
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.catchy-card p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* --- Mission Statement --- */
+.mission-statement {
+  padding: 100px 0;
+  background: linear-gradient(rgba(6, 26, 37, 0.9), rgba(6, 26, 37, 0.9)), 
+              url('home.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.large-quote {
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-style: italic;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.3;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* --- Final CTA (Crimson Section) --- */
+.final-cta {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #B90E0A; /* Crimson Red */
+  color: #ffffff; /* Switched to white for readability */
+}
+
+.final-cta h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); margin-bottom: 15px; font-weight: 900; }
+.final-cta p { font-size: 1.3rem; margin-bottom: 35px; font-weight: 500; }
+.final-cta .hero-btn { 
+  background-color: #061a25; 
+  color: #ffffff; 
+  border-color: #061a25; 
+}
+
+@media (max-width: 768px) {
+  .hero { 
+    /* 1. This creates a "Safe Zone" for the navbar to sit in */
+    padding-top: 160px !important; 
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    /* 2. Switching to 'block' prevents the text from trying to 
+          center itself vertically into the navbar area */
+    display: block !important; 
+    min-height: auto;
+    text-align: center;
+  }
+
+  .welcome-text {
+    /* 3. Give the top text its own margin to separate it from the navbar edge */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .hero h1 { 
+    font-size: 2.2rem; 
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .hero p { 
+    font-size: 1.1rem; 
+    margin-bottom: 35px;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    flex-direction: column; /* Stacks buttons so they don't squash */
+    gap: 15px;
+  }
+
+  .hero-btn { 
+    width: 100%; 
+    text-align: center;
+    padding: 18px 20px; 
+  }
+
+  /* --- Spacing for other sections --- */
+  .intro-highlights { padding: 60px 0; }
+  .large-quote { font-size: 1.3rem; padding: 0 10px; }
+  .final-cta { padding: 60px 20px; }
+}
+
+
+/* --- Global Container --- */
+.about-container {
+  background-color: #ffffff; /* Main page is clean white */
+  color: #333333;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- About Hero (Dark Background) --- */
+.about-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 160px 20px 80px; /* High padding to clear navbar */
+  background-color: #061a25; 
+  color: #ffffff;
+}
+
+.about-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  color: #B90E0A;
+}
+
+/* Targeted Mission Text: Pure White */
+.hero-subtext {
+  font-size: 1.35rem;
+  max-width: 850px;
+  margin: 0 auto;
+  color: #ffffff !important; /* Forces pure white */
+  line-height: 1.7;
+  font-weight: 400;
+  opacity: 1; /* Removes any transparency */
+}
+
+/* --- Main Content Area --- */
+.about-content {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #061a25;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #B90E0A;
+  margin-top: 10px;
+}
+
+/* --- Pillars --- */
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.pillar {
+  background: #fdfdfd;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #eeeeee;
+  border-top: 4px solid #061a25; /* Navy accent */
+  transition: all 0.3s ease;
+}
+
+.pillar:hover {
+  border-top-color: #B90E0A; /* Switches to Red on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* --- Separated Stats Grid --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.stat-box {
+  background: #ffffff;
+  padding: 50px 30px;
+  border-radius: 16px;
+  text-align: center;
+  /* Premium floating shadow */
+  box-shadow: 0 10px 40px rgba(6, 26, 37, 0.06);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(185, 14, 10, 0.1);
+  border-color: #B90E0A;
+}
+
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #061a25; /* Dark navy for the numbers */
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #B90E0A; /* Crimson Red for labels */
+  font-weight: 800;
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 768px) {
+  .about-hero {
+    padding-top: 160px !important;
+  }
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- Global Container --- */
+.services-container {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- Services Hero (Dark Navy) --- */
+.services-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 160px 20px 80px; /* Clearance for fixed navbar */
+  background-color: #061a25;
+  color: #ffffff;
+}
+
+.services-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.services-hero .highlight {
+  color: #B90E0A;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ffffff;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* --- Content Wrapper --- */
+.services-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+.section-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  color: #061a25;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* --- Core Specialties Grid --- */
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 120px;
+}
+
+.specialty-card {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.specialty-card:hover {
+  transform: translateY(-10px);
+  border-color: #B90E0A;
+  box-shadow: 0 20px 40px rgba(185, 14, 10, 0.1);
+}
+
+.icon-box {
+  color: #B90E0A;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.specialty-card h3 {
+  font-size: 1.8rem;
+  color: #061a25;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.specialty-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.pill {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #061a25;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Value-Added Services (List) --- */
+.additional-services {
+  background-color: #fcfcfc;
+  padding: 80px 40px;
+  border-radius: 30px;
+  margin-bottom: 100px;
+}
+
+.service-list-simple {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.service-item-simple {
+  padding: 20px;
+}
+
+.item-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #B90E0A;
+  margin-bottom: 10px;
+}
+
+.item-icon-title h3 {
+  font-size: 1.4rem;
+  color: #061a25;
+  font-weight: 700;
+}
+
+.service-item-simple p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* --- Contingency Banner (The Closer) --- */
+.contingency-banner {
+  background: #061a25;
+  color: #ffffff;
+  padding: 60px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.icon-orange {
+  color: #B90E0A; /* Using your brand red instead of orange */
+  flex-shrink: 0;
+}
+
+.contingency-banner h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contingency-banner p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  opacity: 0.9;
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 768px) {
+  .services-hero {
+    padding-top: 140px !important;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .specialty-card {
+    padding: 40px 20px;
+  }
+}
+/* --- Global Wrapper --- */
+.contact-page-wrapper {
+  background-color: #061a25; /* Navy base */
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- Hero Section & Background --- */
+.contact-hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 140px 20px 80px; /* Offset for navbar */
+}
+
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(6, 26, 37, 0.95) 0%, rgba(6, 26, 37, 0.8) 100%);
+  z-index: 1;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* --- Left Side: Info Panel --- */
+.contact-info-panel {
+  color: #ffffff;
+}
+
+.contact-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.contact-title .highlight {
+  color: #B90E0A;
+}
+
+.contact-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.method-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: rgba(185, 14, 10, 0.1);
+  border: 1px solid #B90E0A;
+  color: #B90E0A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.method-item:hover .icon-circle {
+  background: #B90E0A;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.method-item label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #B90E0A;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.method-item a, .method-item p {
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- Right Side: Inquiry Form Card --- */
+.contact-form-card {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.form-header {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.icon-orange {
+  color: #B90E0A; /* Using Crimson instead of orange */
+  margin-bottom: 15px;
+}
+
+.form-header h3 {
+  font-size: 1.8rem;
+  color: #061a25;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.form-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* --- Form Elements --- */
+.main-contact-form .input-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #061a25;
+  margin-bottom: 8px;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #eeeeee;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+  outline: none;
+  border-color: #B90E0A;
+  background: #fffcfc;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #B90E0A;
+  color: #ffffff;
+  border: none;
+  padding: 18px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #d6110c;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(185, 14, 10, 0.2);
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .contact-info-panel {
+    text-align: center;
+  }
+  
+  .contact-subtitle {
+    margin: 0 auto 40px;
+  }
+  
+  .method-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero-section {
+    padding-top: 120px !important;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form-card {
+    padding: 30px 20px;
+  }
+}
+
+/* --- Global Wrapper --- */
+.submit-cv-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  display: block; /* Ensures the container behaves as a block */
+  position: relative;
+}
+
+/* --- Hero Section --- */
+.submit-hero {
+  background-color: #061a25;
+  /* Increased padding to 200px to definitely clear any navbar */
+  padding: 200px 20px 100px; 
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.submit-header h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.submit-header .highlight {
+  color: #B90E0A;
+}
+
+/* --- Form Container --- */
+.form-container {
+  max-width: 900px;
+  /* Changed margin to 60px to remove the "pull up" effect that might be hiding it */
+  margin: 60px auto 100px; 
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+  display: block;
+}
+
+.cv-form {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  /* Darker shadow to confirm it is rendering */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15); 
+  border: 1px solid #eee;
+}
+
+/* --- Upload Zone --- */
+.upload-zone {
+  position: relative;
+  border: 2px dashed #B90E0A; /* Changed to red so it's visible immediately */
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  background: #fffcfc;
+}
+
+.upload-zone input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* --- Grid & Inputs --- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  padding: 14px;
+  border: 2px solid #eeeeee;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #B90E0A;
+  color: #ffffff;
+  padding: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .submit-hero { padding-top: 160px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-group.full-width { grid-column: span 1; }
+  .cv-form { padding: 30px 15px; }
 }

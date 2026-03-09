@@ -31,17 +31,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Quick Navigation */}
-        <div className="footer-section">
-          <h3>Network</h3>
-          <ul className="footer-links">
-            <li><Link to="/" onClick={scrollToTop}>Home</Link></li>
-            <li><Link to="/about" onClick={scrollToTop}>Our Mission</Link></li>
-            <li><Link to="/services" onClick={scrollToTop}>Services</Link></li>
-            <li><Link to="/submit-cv" onClick={scrollToTop}>Join the Talent Pool</Link></li>
-          </ul>
-        </div>
-
         {/* Contact Information */}
         <div className="footer-section">
           <h3>Get in Touch</h3>
