@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'; 
-import navbarLogo from '../assets/navbar.png'; 
+import navbarLogo from '../assets/navb.png'; 
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
