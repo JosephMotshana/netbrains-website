@@ -973,20 +973,19 @@ background-color: #0E1B22;
   }
 }
 
-/* --- Global Wrapper --- */
+/* --- submit cv --- */
 .submit-cv-page {
-  background-color: #ffffff;
+  background-color: #f8f9fa;
   min-height: 100vh;
   width: 100%;
-  display: block; /* Ensures the container behaves as a block */
+  display: block;
   position: relative;
 }
 
 /* --- Hero Section --- */
 .submit-hero {
   background-color: #061a25;
-  /* Increased padding to 200px to definitely clear any navbar */
-  padding: 200px 20px 100px; 
+  padding: 200px 20px 120px; 
   text-align: center;
   color: #ffffff;
   position: relative;
@@ -994,9 +993,10 @@ background-color: #0E1B22;
 }
 
 .submit-header h1 {
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: 900;
   margin-bottom: 15px;
+  letter-spacing: -1px;
 }
 
 .submit-header .highlight {
@@ -1006,8 +1006,7 @@ background-color: #0E1B22;
 /* --- Form Container --- */
 .form-container {
   max-width: 900px;
-  /* Changed margin to 60px to remove the "pull up" effect that might be hiding it */
-  margin: 60px auto 100px; 
+  margin: -60px auto 100px; 
   padding: 0 20px;
   position: relative;
   z-index: 10;
@@ -1018,7 +1017,6 @@ background-color: #0E1B22;
   background: #ffffff;
   padding: 50px;
   border-radius: 20px;
-  /* Darker shadow to confirm it is rendering */
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15); 
   border: 1px solid #eee;
 }
@@ -1026,12 +1024,18 @@ background-color: #0E1B22;
 /* --- Upload Zone --- */
 .upload-zone {
   position: relative;
-  border: 2px dashed #B90E0A; /* Changed to red so it's visible immediately */
+  border: 2px dashed #B90E0A;
   border-radius: 12px;
   padding: 40px;
   text-align: center;
   margin-bottom: 40px;
   background: #fffcfc;
+  transition: all 0.3s ease;
+}
+
+.upload-zone:hover {
+  background: #fff5f5;
+  border-style: solid;
 }
 
 .upload-zone input[type="file"] {
@@ -1043,6 +1047,11 @@ background-color: #0E1B22;
   opacity: 0;
   cursor: pointer;
   z-index: 5;
+}
+
+.icon-orange {
+  color: #B90E0A;
+  margin-bottom: 10px;
 }
 
 /* --- Grid & Inputs --- */
@@ -1059,35 +1068,146 @@ background-color: #0E1B22;
   gap: 8px;
 }
 
+.form-group label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #061a25;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .form-group.full-width {
   grid-column: span 2;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input, 
+.form-group select, 
+.form-group textarea {
   padding: 14px;
   border: 2px solid #eeeeee;
   border-radius: 8px;
   width: 100%;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
 }
 
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: #B90E0A;
+}
+
+/* --- Privacy Consent Styling --- */
+.privacy-consent {
+  margin: 15px 0 25px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #edf2f7;
+}
+
+.checkbox-label {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  margin-top: 3px;
+  flex-shrink: 0;
+  accent-color: #B90E0A; /* Matches the highlight color */
+}
+
+.checkbox-label strong {
+  color: #061a25;
+}
+
+/* --- Submit Button & Loading Spinner --- */
 .submit-btn {
   width: 100%;
   background: #B90E0A;
   color: #ffffff;
-  padding: 20px;
+  padding: 18px;
   font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 1px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #8e0b08;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background: #cbd5e0; /* Subtle gray when disabled */
+  color: #718096;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* When processing (specifically the navy look you liked) */
+.submit-btn:disabled.is-loading {
+  background: #061a25;
+  color: #ffffff;
+  opacity: 0.9;
+  cursor: wait;
+}
+
+.spinner {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- Success Message Animation --- */
+.success-message {
+  text-align: center;
+  padding: 50px;
+  animation: fadeIn 0.5s ease;
+}
+
+.success-message svg {
+  animation: scaleUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 /* --- Mobile --- */
 @media (max-width: 768px) {
-  .submit-hero { padding-top: 160px; }
+  .submit-hero { padding-top: 150px; }
+  .form-container { margin-top: -40px; }
   .form-grid { grid-template-columns: 1fr; }
   .form-group.full-width { grid-column: span 1; }
-  .cv-form { padding: 30px 15px; }
+  .cv-form { padding: 30px 20px; }
+  .checkbox-label { font-size: 0.8rem; }
 }
 
 /* --- Footer Base --- */

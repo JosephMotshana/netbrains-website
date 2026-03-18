@@ -52,7 +52,7 @@ const Footer = () => {
             </li>
             <li>
               <MapPin size={16} className="highlight" />
-              <span>Fourways, Sandton, ZA</span>
+              <span>Spaces Broadacres,Fourways,SANDTON,2021</span>
             </li>
           </ul>
         </div>
@@ -65,9 +65,9 @@ const Footer = () => {
           <p>&copy; {currentYear} NetBrains Agency. All rights reserved.</p>
           <Link to="https://actsquadrant.com/" className="hero-btn">Powered By Acts Quadrant</Link>
           <div className="footer-legal">
-            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="https://docs.google.com/document/d/1liXejC_K33p6M0Gy3UlV2wakqzSRsfia8fILMQtjuxw/edit?usp=sharing">Privacy Policy</Link>
             <span className="divider">|</span>
-            <Link to="/terms">Terms of Service</Link>
+            <Link to="https://drive.google.com/file/d/1AptEhs1d-d5pBJbhaTo_gpMYRpadXehg/view?usp=drive_link">Terms of Service</Link>
           </div>
         </div>
       </div>
