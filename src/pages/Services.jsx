@@ -14,21 +14,21 @@ const Services = () => {
   const specialties = [
     {
       title: "Human Resources",
-      desc: "Specializing in permanent and contract HR staff. We help businesses employ top-tier personnel efficiently.",
+      desc: "Specializing in permanent HR staffing. We help organisations employ top-tier personnel efficiently.",
       icon: <Users size={32} />,
-      type: "Permanent & Contract"
+      type: "Permanent"
     },
     {
       title: "IT Placements",
       desc: "Recruiting top IT staff and technical personnel tailored for companies looking to innovate.",
       icon: <Monitor size={32} />,
-      type: "Permanent & Contract"
+      type: "Permanent"
     },
     {
       title: "Admin Professionals",
       desc: "Recruiting high-level administrative staff and personnel to ensure your business operations run smoothly.",
       icon: <FileText size={32} />,
-      type: "Permanent & Contract"
+      type: "Permanent"
     }
   ];
 
